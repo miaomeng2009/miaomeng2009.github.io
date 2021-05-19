@@ -51,7 +51,7 @@
 				position: fixed;
 				bottom: 90px;
 				right: 35px;
-				visibility: hidden;
+				/* visibility: hidden; */
 				opacity: 0;
 				-webkit-transform: translateY(-20px);
 				transform: translateY(-20px);
@@ -59,7 +59,7 @@
 				transition: all 0.3s ease;
 			}
 			.popup_chat_on.active{
-				visibility: visible;
+				/* visibility: visible; */
 				opacity: 1;
 				transform: translateY(0px);
 			}
@@ -240,7 +240,7 @@
 					<svg t="1621219467902" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15013" width="24" height="24"><path d="M519.02036023 459.47959989L221.8941505 162.35411435a37.07885742 37.07885742 0 1 0-52.45354772 52.40502656l297.12476134 297.15010821L169.44060278 809.05863314a37.07885742 37.07885742 0 1 0 52.42964924 52.42892505l297.15010821-297.12476136 297.15010822 297.12476136a37.07885742 37.07885742 0 1 0 52.42892504-52.40430237l-297.12476135-297.1740067 297.12476135-297.12548553a37.07885742 37.07885742 0 1 0-52.42892504-52.42964924L519.04498291 459.47959989z" p-id="15014" fill="#ffffff"></path></svg>
 				</div>
 			</div>
-			<div class="popup_chat_on active">
+			<div class="popup_chat_on">
 				<div class="popup_chat_in">
 					<div class="close_chat">
 						<svg t="1621219467902" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15013" width="15" height="15"><path d="M519.02036023 459.47959989L221.8941505 162.35411435a37.07885742 37.07885742 0 1 0-52.45354772 52.40502656l297.12476134 297.15010821L169.44060278 809.05863314a37.07885742 37.07885742 0 1 0 52.42964924 52.42892505l297.15010821-297.12476136 297.15010822 297.12476136a37.07885742 37.07885742 0 1 0 52.42892504-52.40430237l-297.12476135-297.1740067 297.12476135-297.12548553a37.07885742 37.07885742 0 1 0-52.42892504-52.42964924L519.04498291 459.47959989z" p-id="15014" fill="#666"></path></svg>
@@ -311,7 +311,7 @@
 			
 		</div>
 		
-		<!-- <script src="jquery.min.js"></script> -->
+		<script src="jquery.min.js"></script>
 		<script type="text/javascript">
 			 $(function(){
 				var $dialogOpen = false;
@@ -336,7 +336,8 @@
 					if($(this).text() != ''){
 						$(".chat-enter").addClass("active")
 						if (event.keyCode == 32) {
-							$(".chat-message").append(_selfMessage).scrollTop($(".chat-message").height())
+							$(".chat-message").append(_selfMessage)
+							// $(".chat-message").append(_selfMessage).scrollTop($(".chat-message").height())
 						}; 
 					}else{
 						$(".chat-enter").removeClass("active")
